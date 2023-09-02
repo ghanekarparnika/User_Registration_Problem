@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-//UC5-Ensure the player gets to exact winning position 100
+//Report the number of times the dice was played to win the game and also the position after every die role
 
 internal class Programm
 {
@@ -14,12 +14,14 @@ internal class Programm
 
         Console.WriteLine("welcome to Snake Ladder Game...lets start");
         int position = 0;
+        int count = 0;
 
         while (position < 100) 
         { 
          //simulate rolling a die (1 to 6)
              Random random = new Random();
                    int diceValue = random.Next(1, 7);
+            count++;
                 
         //simulate option: NO_PLAY,LADDER,SNAKE
                   Random random1 = new Random();
@@ -58,5 +60,7 @@ internal class Programm
             //report players psition after every roll
             Console.WriteLine("you are at: "+position);
         }
+        Console.WriteLine("hurray...you won the game");
+        Console.WriteLine("To won the game you played dice "+count+" times...");
     }
 }
