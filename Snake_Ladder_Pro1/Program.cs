@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-//UC4-Repeat till the Player reaches the winning position 100. 
+//UC5-Ensure the player gets to exact winning position 100
 
 internal class Programm
 {
@@ -48,7 +48,12 @@ internal class Programm
                 Console.WriteLine("oops...you are at zero....restarting game");
                 position = 0;
             }
-           
+            //ensure the players position is exact 100.
+            if (position >100)
+            {
+                Console.WriteLine("oops...you are at zero....restarting game");
+                position -= diceValue;
+            }
 
             //report players psition after every roll
             Console.WriteLine("you are at: "+position);
