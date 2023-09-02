@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //Console.WriteLine("Hello, World!");
-//Report the number of times the dice was played to win the game and also the position after every die role
+//UC7-Play the game with 2 Player.In this case if a Player gets a Ladder then plays again.Finally report which Player won the game
+using System.Numerics;
 
 internal class Programm
 {
@@ -13,10 +14,12 @@ internal class Programm
     {
 
         Console.WriteLine("welcome to Snake Ladder Game...lets start");
-        int position = 0;
+        int player1Position = 0;
+        int player2Position = 0;
         int count = 0;
+        int currentPlayer = 1; 
 
-        while (position < 100) 
+        while (player1Position < 100 && player2Position<100) 
         { 
          //simulate rolling a die (1 to 6)
              Random random = new Random();
@@ -26,6 +29,7 @@ internal class Programm
         //simulate option: NO_PLAY,LADDER,SNAKE
                   Random random1 = new Random();
                  int option = random1.Next(1, 4);
+
             switch (option)
                 {
             case NO_PLAY:
@@ -33,34 +37,73 @@ internal class Programm
                 break;
             case LADDER:
                 Console.WriteLine("yey!...ladder");
-                position += diceValue;
-               // Console.WriteLine("You are at position: " + position);
+                    if(currentPlayer==1)
+                    {
+                        player1Position += diceValue;
+                    }
+                    else
+                    {
+                        player2Position += diceValue;
+                    }
+           
                 break;
             case SNAKE:
                 Console.WriteLine("oooops....Snake");
-                position -= diceValue;
-               // Console.WriteLine("You are at position: " + position);
-                break;
+                    if (currentPlayer == 1)
+                    {
+                        player1Position -= diceValue;
+                    }
+                    else
+                    {
+                        player2Position -= diceValue;
+                    }
+                    break;
 
 
             }
+
             //ensure the players position is not below zero
-            if (position<0) 
+            if (player1Position<0) 
             {
-                Console.WriteLine("oops...you are at zero....restarting game");
-                position = 0;
+                Console.WriteLine("oops...player1 you are at zero....restarting game");
+                player1Position = 0;
             }
-            //ensure the players position is exact 100.
-            if (position >100)
+
+            if (player2Position < 0)
             {
-                Console.WriteLine("oops...you are at zero....restarting game");
-                position -= diceValue;
+                Console.WriteLine("oops...player2 you are at zero....restarting game");
+                player2Position = 0;
+            }
+
+
+            //ensure the players position is exact 100.
+            if (player1Position >100)
+            {
+                player1Position -= diceValue;
+            }
+            if (player2Position >100) 
+            { 
+                player2Position-= diceValue;
             }
 
             //report players psition after every roll
-            Console.WriteLine("you are at: "+position);
+            Console.WriteLine("player1 at position: "+player1Position);
+            Console.WriteLine("player2 at position: " + player2Position);
+
+            // Check for a ladder and switch to the other player if needed
+            if (option == 1)
+            {
+                if (currentPlayer == 1)
+                    currentPlayer = 2;
+                else
+                    currentPlayer = 1;
+            }
         }
-        Console.WriteLine("hurray...you won the game");
-        Console.WriteLine("To won the game you played dice "+count+" times...");
+        if (player1Position >= 100)
+            Console.WriteLine("Player 1 won the game!");
+        else
+            Console.WriteLine("Player 2 won the game!");
+
+        Console.WriteLine($"Total dice rolls: "+count);
     }
 }
