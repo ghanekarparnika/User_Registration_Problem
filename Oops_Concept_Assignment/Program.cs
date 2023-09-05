@@ -34,7 +34,18 @@ tiger.consume(str,str1);
 Dog dog=new Dog();
 dog.makeSound();
 Animal animal=new Animal();
-animal.makeSound(); 
+animal.makeSound();
+
+
+Console.WriteLine("===================================================");
+
+//4) Create a program with Encapsulation concept with example.
+Console.WriteLine("Que-4-Encapsulation");
+
+Person person =new Person();
+Console.WriteLine("Name: "+person.name+"\nAge: "+person.age+"\nAddress: "+person.address+"\nPhoneNo: "+person.phoneNo);
+
+//person.personalId;//we cant access this instance member due to its protection level ie. it is private hence security
 
 
 
