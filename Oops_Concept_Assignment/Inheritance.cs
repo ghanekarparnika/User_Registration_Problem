@@ -15,12 +15,12 @@ namespace Oops_Concept_Assignment
     {
         public void start()
         {
-            Console.WriteLine("Start engine..");
+            Console.WriteLine("Start engine from parent..");
         }
 
         public void stop() 
         {
-            Console.WriteLine("stop engine.."); 
+            Console.WriteLine("stop engine from parent.."); 
         }
     }
 
