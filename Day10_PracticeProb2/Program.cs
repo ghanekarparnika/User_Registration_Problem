@@ -24,3 +24,12 @@ Constructor_Types obj4 = new Constructor_Types();
 // Accessing static constructor
 Console.WriteLine("Static constructor has already been called.");
 Console.WriteLine("==============================================");
+
+//2) Perform interface concept with examples.
+Console.WriteLine("Q2-Interface");
+Shape s1= new Circle();
+s1.Area();
+Shape s2 = new Rectangle();
+s2.Area();
+Shape s3 = new Triangle();
+s3.Area();
