@@ -33,3 +33,14 @@ Shape s2 = new Rectangle();
 s2.Area();
 Shape s3 = new Triangle();
 s3.Area();
+Console.WriteLine("==============================================");
+
+//3) Perform access modifiers concepts with examples.
+Console.WriteLine("Q3-Access Modifier");
+
+AccessModifiers a1 = new AccessModifiers();
+a1.disp();
+Child c=new Child();
+c.disp1();
+Myaclass m=new Myaclass();
+m.disp3();
