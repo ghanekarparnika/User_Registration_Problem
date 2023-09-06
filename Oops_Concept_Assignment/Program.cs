@@ -47,5 +47,17 @@ Console.WriteLine("Name: "+person.name+"\nAge: "+person.age+"\nAddress: "+person
 
 //person.personalId;//we cant access this instance member due to its protection level ie. it is private hence security
 
+Console.WriteLine("===================================================");
+
+//5) Create a program with Abstraction concept.
+Console.WriteLine("Que-5-Abstarction");
+Saving a1=new Saving();
+a1.AccNo = 1;
+a1.Name = "Parnika Ghanekar";
+a1.Age = 23;
+a1.AccType = "Saving";
+a1.print();
+a1.minimumBalance();
+
 
 
