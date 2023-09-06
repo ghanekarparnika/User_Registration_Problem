@@ -95,5 +95,12 @@ obj1.Name = "Santu"; // Modifying the object using one reference
 
 Console.WriteLine("obj1.Name: " + obj1.Name); // Output: obj1.Name: Santu
 Console.WriteLine("obj2.Name: " + obj2.Name); // Output: obj2.Name: Santu (both references point to the same object)
-    
+
+Console.WriteLine("===================================================");
+
+
+//9) Types of inheritance in c#.
+Console.WriteLine("Que-9-Types of Inheritance");
+Inheritance_Types ob=new Inheritance_Types();
+ob.Type();
 
