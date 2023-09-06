@@ -62,7 +62,21 @@ a1.minimumBalance();
 Console.WriteLine("===================================================");
 
 //6) Create a program to demonstrate types of variables present in c#.
-Console.WriteLine("Que-6-Abstarction");
+Console.WriteLine("Que-6-Types of variables");
 Variable_Types v=new Variable_Types();
 v.checkDataTypes();
+
+Console.WriteLine("===================================================");
+
+//7) Create a program to demonstrate types of methods.
+// Create an instance of the Program class
+
+Console.WriteLine("Que-7-Method Types");
+Method_Types m=new Method_Types();
+
+// Call the instance method
+m.InstanceMethod();
+
+// Call the static method
+Method_Types.StaticMethod();
 
