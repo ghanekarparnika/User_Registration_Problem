@@ -59,5 +59,10 @@ a1.AccType = "Saving";
 a1.print();
 a1.minimumBalance();
 
+Console.WriteLine("===================================================");
 
+//6) Create a program to demonstrate types of variables present in c#.
+Console.WriteLine("Que-6-Abstarction");
+Variable_Types v=new Variable_Types();
+v.checkDataTypes();
 
