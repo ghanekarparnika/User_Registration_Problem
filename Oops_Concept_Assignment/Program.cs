@@ -79,4 +79,21 @@ m.InstanceMethod();
 
 // Call the static method
 Method_Types.StaticMethod();
+Console.WriteLine("===================================================");
+
+//8) What is value type and reference type with code explain it.
+Console.WriteLine("Que-8-Value tpyes and reference types");
+Value_Reference_Type obj1 =new Value_Reference_Type();
+obj1.ValueType();
+
+
+obj1.Name = "Parnika"; // Creating an instance of the Value_reference_Type class and setting a property
+
+Value_Reference_Type obj2 = obj1; // Creating a reference to the same object
+
+obj1.Name = "Santu"; // Modifying the object using one reference
+
+Console.WriteLine("obj1.Name: " + obj1.Name); // Output: obj1.Name: Santu
+Console.WriteLine("obj2.Name: " + obj2.Name); // Output: obj2.Name: Santu (both references point to the same object)
+    
 
