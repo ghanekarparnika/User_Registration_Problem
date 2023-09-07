@@ -87,5 +87,10 @@ Console.WriteLine("=============================================================
 - Define new test case to use the Generic Class*/
 
 GenericDemo2<int> t = new GenericDemo2<int>(10,30,4);
-int num=t.maxGen();
-Console.WriteLine("Max integer by using Generic class is: "+num);
+//Console.WriteLine("Max integer by using Generic class is: "+num);
+
+/*UC4- Extend the max method to take more then three parameters -use options and use sorting */
+
+var intMaxFinder = new GenericDemo2<int>(10, 5, 3, 20, 1);
+int intMax = intMaxFinder.FindMaximum();
+Console.WriteLine("Maximum (Integers): " + intMax);
