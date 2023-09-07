@@ -62,8 +62,7 @@ Console.WriteLine("=============================================================
 //Refactor-1
 /*Refactor all the 3 to One Generic Method and find the maximum
 
-- Ensure the Generic Type extends
-Comparable
+- Ensure the Generic Type extends Comparable
 
 - Make the test case work*/
 GenericDemo g1= new GenericDemo();
@@ -77,3 +76,16 @@ Console.WriteLine("max float is using generic method : " + value1);
 
 string value2 = g1.maxGen("Peach", "Apple", "Banana");
 Console.WriteLine("max lexicographically string is using generic method : " + value2);
+
+Console.WriteLine("=================================================================");
+//Refactor-2
+/*Refactor to create Generic Class to take in 3 variables of Generic Type
+
+- Ensure the Generic Type extends Comparable
+- Write parameter constructor
+- Write testMaximum method to internally call the static testMaximum method passing the 3 instance variables
+- Define new test case to use the Generic Class*/
+
+GenericDemo2<int> t = new GenericDemo2<int>(10,30,4);
+int num=t.maxGen();
+Console.WriteLine("Max integer by using Generic class is: "+num);
