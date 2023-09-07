@@ -56,13 +56,26 @@ namespace Day13_Practice_Prob
 
         public T FindMaximum()
         {
+            /* if (values.Count == 0)
+             {
+                 throw new InvalidOperationException("No values provided.");
+             }
+
+             values.Sort();
+             return values.Last();*/
             if (values.Count == 0)
             {
                 throw new InvalidOperationException("No values provided.");
             }
 
             values.Sort();
-            return values.Last();
+            T max = values.Last();
+            PrintMax(max);
+            return max;
+        }
+        private void PrintMax(T max)
+        {
+            Console.WriteLine("Maximum value : "+max);
         }
     }
 }

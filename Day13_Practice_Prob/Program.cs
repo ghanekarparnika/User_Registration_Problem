@@ -91,6 +91,14 @@ GenericDemo2<int> t = new GenericDemo2<int>(10,30,4);
 
 /*UC4- Extend the max method to take more then three parameters -use options and use sorting */
 
+/*var intMaxFinder = new GenericDemo2<int>(10, 5, 3, 20, 1);
+int intMax = intMaxFinder.FindMaximum();
+Console.WriteLine("Maximum (Integers): " + intMax);*/
+
+/*UC5-Extend the max method to also print the max to std out using Generic Method -Write printMax Generic Method which is
+
+UC 5 internally called from testMaximum*/
+
+
 var intMaxFinder = new GenericDemo2<int>(10, 5, 3, 20, 1);
 int intMax = intMaxFinder.FindMaximum();
-Console.WriteLine("Maximum (Integers): " + intMax);
