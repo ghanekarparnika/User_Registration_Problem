@@ -56,3 +56,24 @@ Console.WriteLine("max lexocographical string is : " + result8);
 //TC 3.3Given Max Number at 3rd Position return the Same Number Ensure the test data has Max Number in the Third position
 string result9 = TestMaximum.maxString("Apple", "Banana", "Peach");
 Console.WriteLine("max lexocographical string is : " + result9);
+
+Console.WriteLine("=================================================================");
+
+//Refactor-1
+/*Refactor all the 3 to One Generic Method and find the maximum
+
+- Ensure the Generic Type extends
+Comparable
+
+- Make the test case work*/
+GenericDemo g1= new GenericDemo();
+int value= g1.maxGen(200, 56, 1);
+
+Console.WriteLine("max Integer is using generic method : " + value);
+
+
+float value1 = g1.maxGen(200.80f, 56.76f, 1.45f);
+Console.WriteLine("max float is using generic method : " + value1);
+
+string value2 = g1.maxGen("Peach", "Apple", "Banana");
+Console.WriteLine("max lexicographically string is using generic method : " + value2);
