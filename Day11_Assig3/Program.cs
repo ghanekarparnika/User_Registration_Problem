@@ -3,6 +3,7 @@
 
 
 using Day11_Assig3;
+using System;
 //1) Write a program in C# Sharp to count a total number of duplicate elements in an array.
 
 Console.WriteLine("Q1-print count of duplicate elements");
@@ -18,3 +19,8 @@ Console.WriteLine("Q2-print count of Unique elements");
 UniqueElements.printUnique();
 Console.WriteLine();
 Console.WriteLine("===================================================");
+//3) Write a program in C# Sharp to count the frequency of each element of an array.
+Console.WriteLine("Q3-print Frequency of each element");
+Frequency.calFrequency();
+Console.WriteLine("===================================================");
+
