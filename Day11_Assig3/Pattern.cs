@@ -21,5 +21,28 @@ namespace Day11_Assig3
                 Console.WriteLine();
             }
         }
+
+        public static void pattern2() 
+        {
+            int n = 7; // Number of rows
+            int m = 7; // Number of columns
+
+            for (int i = 1; i <= n; i++)
+            {
+                for (int j = 1; j <= m; j++)
+                {
+                    if (i == 1 || i == n || j == 1 || j == m)
+                    {
+                        Console.Write("* ");
+                    }
+                    else
+                    {
+                        Console.Write("  "); // Print spaces for inner part
+                    }
+                }
+                Console.WriteLine();
+                Console.WriteLine();// Move to the next row
+            }
+        }
     }
 }
