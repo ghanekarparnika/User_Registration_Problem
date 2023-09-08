@@ -36,7 +36,7 @@ Console.WriteLine("===================================================");
 ***
 **
 *           */
-
+Console.WriteLine("Q5-print given pattern");
 Pattern.pattern1();
 Console.WriteLine("===================================================");
 /*6) Write a program to print below pattern.
@@ -56,5 +56,13 @@ Console.WriteLine("===================================================");
  
  
  */
+Console.WriteLine("Q6-print given pattern");
 Pattern.pattern2();
 Console.WriteLine("=====================================================");
+//7) How to Reverse Each Word in a Given String in C#. 
+Console.WriteLine("Q7-reverse String");
+string input = "Hello, World!";
+string reversed = ReverseString.reverseString(input);
+
+Console.WriteLine("Original String: " + input);
+Console.WriteLine("Reversed String: " + reversed);
