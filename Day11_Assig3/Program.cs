@@ -66,3 +66,9 @@ string reversed = ReverseString.reverseString(input);
 
 Console.WriteLine("Original String: " + input);
 Console.WriteLine("Reversed String: " + reversed);
+Console.WriteLine("=====================================================");
+
+//8) C# program to find sum of all digits of a given number.
+Console.WriteLine("Q8-sum of all dogits in given number");
+Sum.add();
+Console.WriteLine("=====================================================");
