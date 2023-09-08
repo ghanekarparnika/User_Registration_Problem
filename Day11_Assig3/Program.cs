@@ -27,3 +27,14 @@ Console.WriteLine("===================================================");
 Console.WriteLine("Q4-print Max and Min element in array");
 Max_Min_Element.printMax_Min();
 Console.WriteLine("===================================================");
+/*Write a program to print below pattern.
+********
+*******
+******
+*****
+****
+***
+**
+*           */
+
+Pattern.pattern1();
