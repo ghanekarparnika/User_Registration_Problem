@@ -23,4 +23,7 @@ Console.WriteLine("===================================================");
 Console.WriteLine("Q3-print Frequency of each element");
 Frequency.calFrequency();
 Console.WriteLine("===================================================");
-
+//4) Write a program in C# Sharp to find maximum and minimum element in an array.
+Console.WriteLine("Q4-print Max and Min element in array");
+Max_Min_Element.printMax_Min();
+Console.WriteLine("===================================================");
