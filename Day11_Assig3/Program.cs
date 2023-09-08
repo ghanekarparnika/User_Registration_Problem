@@ -72,3 +72,5 @@ Console.WriteLine("=====================================================");
 Console.WriteLine("Q8-sum of all dogits in given number");
 Sum.add();
 Console.WriteLine("=====================================================");
+//9) C# program to find the sum of each row of the matrix.
+Matrx_Sum.rowSum();
