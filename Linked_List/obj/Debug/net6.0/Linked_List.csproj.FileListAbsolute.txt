@@ -1,0 +1,14 @@
+C:\Users\UDIT\Downloads\Linked_List\bin\Debug\net6.0\Linked_List.exe
+C:\Users\UDIT\Downloads\Linked_List\bin\Debug\net6.0\Linked_List.deps.json
+C:\Users\UDIT\Downloads\Linked_List\bin\Debug\net6.0\Linked_List.runtimeconfig.json
+C:\Users\UDIT\Downloads\Linked_List\bin\Debug\net6.0\Linked_List.dll
+C:\Users\UDIT\Downloads\Linked_List\bin\Debug\net6.0\Linked_List.pdb
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.AssemblyInfoInputs.cache
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.AssemblyInfo.cs
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.csproj.CoreCompileInputs.cache
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.dll
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\refint\Linked_List.dll
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.pdb
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\Linked_List.genruntimeconfig.cache
+C:\Users\UDIT\Downloads\Linked_List\obj\Debug\net6.0\ref\Linked_List.dll
