@@ -28,7 +28,15 @@ LinkedList_Demo link = new LinkedList_Demo();
 //link.addNode(56);
 //link.addNode(70);
 //link.Display();
-link.appendNode(56);
+//UC2
+/*link.appendNode(56);
 link.appendNode(30);
 link.appendNode(70);
+link.Display();*/
+
+//UC3
+ link.addNode(56);
+link.addNode(70);
+link.InsertAfter(56, 30);
 link.Display();
+

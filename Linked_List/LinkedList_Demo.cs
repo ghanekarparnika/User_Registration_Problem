@@ -10,7 +10,7 @@ namespace Linked_List
     internal class LinkedList_Demo
     {
         public Node head;
-       /* public void addNode(int data)
+        public void addNode(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -27,10 +27,11 @@ namespace Linked_List
                 temp.Next = node;
             }
             Console.WriteLine(data + " is inserted into the linkedlist");
-        }*/
+        }
 
 
-        public void appendNode(int data)
+        //UC2
+       /* public void appendNode(int data)
         {
             Node node = new Node(data);
             if(this.head == null)
@@ -47,6 +48,24 @@ namespace Linked_List
                 current.Next = node;
             }
             Console.WriteLine(data + " is appended to the linkedlist");
+        }*/
+
+
+        //UC3
+        public void InsertAfter(int preData, int newData)
+        {
+            Node newNode = new Node(newData);
+            Node current= head;
+            while (current != null) 
+            {
+                if(current.data == preData)
+                {
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                    return;
+                }
+                current = current.Next;
+            }
         }
 
         public void Display()
