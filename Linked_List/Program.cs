@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 
 
-//UC-5Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
+//UC-7Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
 //- Note there is new tail
 //- Final Sequence: 56->30
 
@@ -19,7 +19,15 @@ linkedList.Add(70);
 Console.WriteLine("Original LinkedList:");
 linkedList.Display();
 
-linkedList.PopLast();
+// Search for a value (e.g., 30)
+int searchValue = 30;
+Node resultNode = linkedList.Search(searchValue);
 
-Console.WriteLine("Updated LinkedList:");
-linkedList.Display();
+if (resultNode != null)
+{
+    Console.WriteLine("Found node with value:"+resultNode.Data);
+}
+else
+{
+    Console.WriteLine("Node with value "+ searchValue +" not found.");
+}

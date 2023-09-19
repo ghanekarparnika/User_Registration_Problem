@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace Linked_List
 {
-    internal class LinkedList_Demo
+    public class LinkedList_Demo
     {
 
         private Node head;
@@ -68,5 +68,25 @@ namespace Linked_List
 
             current.Next = null;
         }
+
+        public Node Search(int key)
+        {
+            Node current = head;
+            while (current != null)
+            {
+                if (current.Data == key)
+                {
+                    return current; // Found the node with the given key
+                }
+                current = current.Next;
+            }
+            return null; // Node with the key not found
+        }
+
     }
+  
+
+
+
 }
+
