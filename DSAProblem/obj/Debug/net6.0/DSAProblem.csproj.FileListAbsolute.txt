@@ -1,0 +1,14 @@
+C:\Users\UDIT\Downloads\DSAProblem\bin\Debug\net6.0\DSAProblem.exe
+C:\Users\UDIT\Downloads\DSAProblem\bin\Debug\net6.0\DSAProblem.deps.json
+C:\Users\UDIT\Downloads\DSAProblem\bin\Debug\net6.0\DSAProblem.runtimeconfig.json
+C:\Users\UDIT\Downloads\DSAProblem\bin\Debug\net6.0\DSAProblem.dll
+C:\Users\UDIT\Downloads\DSAProblem\bin\Debug\net6.0\DSAProblem.pdb
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.AssemblyInfoInputs.cache
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.AssemblyInfo.cs
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.csproj.CoreCompileInputs.cache
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.dll
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\refint\DSAProblem.dll
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.pdb
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\DSAProblem.genruntimeconfig.cache
+C:\Users\UDIT\Downloads\DSAProblem\obj\Debug\net6.0\ref\DSAProblem.dll

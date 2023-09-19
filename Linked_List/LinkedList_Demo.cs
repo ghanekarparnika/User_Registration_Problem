@@ -9,80 +9,64 @@ namespace Linked_List
 {
     internal class LinkedList_Demo
     {
-        public Node head;
-        public void addNode(int data)
+
+        private Node head;
+
+        public LinkedList_Demo()
         {
-            Node node = new Node(data);
-            if (this.head == null)
+            head = null;
+        }
+
+        public void Add(int data)
+        {
+            Node newNode = new Node(data);
+            if (head == null)
             {
-                this.head = node;
+                head = newNode;
             }
             else
             {
-                Node temp = head;
-                while (temp.Next != null)
-                {
-                    temp = temp.Next;
-                }
-                temp.Next = node;
-            }
-            Console.WriteLine(data + " is inserted into the linkedlist");
-        }
-
-
-        //UC2
-       /* public void appendNode(int data)
-        {
-            Node node = new Node(data);
-            if(this.head == null)
-            {
-                this.head = node;
-            }
-            else 
-            {
                 Node current = head;
-                while (current.Next != null) 
+                while (current.Next != null)
                 {
-                    current = current.Next; ;
+                    current = current.Next;
                 }
-                current.Next = node;
+                current.Next = newNode;
             }
-            Console.WriteLine(data + " is appended to the linkedlist");
-        }*/
 
-
-        //UC3
-        public void InsertAfter(int preData, int newData)
+        }
+        public void Display()
         {
-            Node newNode = new Node(newData);
-            Node current= head;
-            while (current != null) 
+            Node current = head;
+            while (current != null)
             {
-                if(current.data == preData)
-                {
-                    newNode.Next = current.Next;
-                    current.Next = newNode;
-                    return;
-                }
+                Console.Write(current.Data + " -> ");
                 current = current.Next;
             }
+            Console.WriteLine("null");
         }
 
-        public void Display()
+        public void PopLast()
         {
             if (head == null)
             {
-                Console.WriteLine("LinkedList is empty");
+                Console.WriteLine("The list is empty. Nothing to delete.");
+                return;
             }
-            else
+
+            if (head.Next == null)
             {
-                Node tempNode = head;
-                while (tempNode != null)
-                {
-                    Console.Write(tempNode.data + "-->");
-                    tempNode = tempNode.Next;
-                }
+                head = null;
+                return;
             }
+
+            Node current = head;
+            while (current.Next.Next != null)
+            {
+                current = current.Next;
+            }
+
+            current.Next = null;
         }
     }
 }

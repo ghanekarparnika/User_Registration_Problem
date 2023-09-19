@@ -5,38 +5,21 @@
 using Linked_List;
 using System.Collections.Generic;
 
-/*LinkedList<int> list = new LinkedList<int>();
-list.AddFirst(56);
-list.AddLast(30);
-list.AddLast(70);
-Console.Write("Created Linked List: ");
 
-foreach (int data in list)
-{
-    Console.Write(data+"-->");
-}*/
 
-//Ability to create Linked List by adding 30 and 56 to 70
+//UC-5Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
+//- Note there is new tail
+//- Final Sequence: 56->30
 
-/*
-- Node with data 70 is First Created
-- Next 30 is added to 70
-- Finally 56 is added to 30
-- LinkedList Sequence: 56->30->70*/
+LinkedList_Demo linkedList = new LinkedList_Demo();
+linkedList.Add(56);
+linkedList.Add(30);
+linkedList.Add(70);
 
-LinkedList_Demo link = new LinkedList_Demo();
-//link.addNode(56);
-//link.addNode(70);
-//link.Display();
-//UC2
-/*link.appendNode(56);
-link.appendNode(30);
-link.appendNode(70);
-link.Display();*/
+Console.WriteLine("Original LinkedList:");
+linkedList.Display();
 
-//UC3
- link.addNode(56);
-link.addNode(70);
-link.InsertAfter(56, 30);
-link.Display();
+linkedList.PopLast();
 
+Console.WriteLine("Updated LinkedList:");
+linkedList.Display();

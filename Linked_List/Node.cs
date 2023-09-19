@@ -9,11 +9,12 @@ namespace Linked_List
     internal class Node
     {
 
-        public int data;
+        public int Data;
         public Node Next;
+
         public Node(int data)
         {
-            this.data = data;
+            Data = data;
             Next = null;
         }
     }
