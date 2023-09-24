@@ -5,29 +5,14 @@
 using Linked_List;
 using System.Collections.Generic;
 
+/*Ability to delete 40 from the Linked List sequence of 56->30->40->70 and show the size of LinkedList is 3
 
+- Write MSTest Test Case as demonstrated in class
+-Search LinkedList to find node with key value 40
+- Delete the node
+- Implement size() and show the Linked List size is 3
+- Final Sequence: 56->30->70*/
 
-//UC-7Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
-//- Note there is new tail
-//- Final Sequence: 56->30
-
-LinkedList_Demo linkedList = new LinkedList_Demo();
-linkedList.Add(56);
-linkedList.Add(30);
-linkedList.Add(70);
-
-Console.WriteLine("Original LinkedList:");
-linkedList.Display();
-
-// Search for a value (e.g., 30)
-int searchValue = 30;
-Node resultNode = linkedList.Search(searchValue);
-
-if (resultNode != null)
-{
-    Console.WriteLine("Found node with value:"+resultNode.Data);
-}
-else
-{
-    Console.WriteLine("Node with value "+ searchValue +" not found.");
-}
+// Main method is used for running tests
+var testClass = new LinkedListTests();
+testClass.TestDeleteAndSize();
