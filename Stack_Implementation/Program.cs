@@ -6,10 +6,31 @@
 
 using Stack_Implementation;
 
-Stack_Using_LinkedList<int> stack = new Stack_Using_LinkedList<int>();
+/*Stack_Using_LinkedList<int> stack = new Stack_Using_LinkedList<int>();
 stack.Push(70);
 stack.Push(30);
 stack.Push(56);
 
-Console.WriteLine("Top of the stack: " + stack.Peek()); // Output: 56
+Console.WriteLine("Top of the stack: " + stack.Peek()); // Output: 56*/
 
+Queue_Using_LinkedList<int> queue = new Queue_Using_LinkedList<int>();
+
+queue.Enqueue(56);
+queue.Enqueue(30);
+queue.Enqueue(70);
+
+Console.WriteLine("Front of the queue: " + queue.Peek()); // Output: 56
+
+Console.WriteLine("Dequeue: " + queue.Dequeue()); // Output: Dequeue: 56
+Console.WriteLine("Dequeue: " + queue.Dequeue()); // Output: Dequeue: 30
+Console.WriteLine("Dequeue: " + queue.Dequeue()); // Output: Dequeue: 70
+
+if (queue.IsEmpty())
+{
+    Console.WriteLine("The queue is empty.");
+}
+else
+{
+    
+        Console.WriteLine("The queue is not empty.");
+}
