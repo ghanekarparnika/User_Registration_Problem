@@ -74,5 +74,21 @@ namespace AddressBook_Demo
             Console.WriteLine("===============================");
             con.Close() ;
         }
+
+        //UC5-add multiple persons at one time
+
+        public static void InsertMutiData()
+        {
+            string query = "insert into Contact values('Sagar','Deshmukh','India','Amravati','Maharashtra',600024,8834460049,'sagar123@gmail.com'),('Vivek','Pandye','India','Gorakhpur','Uttar Pradesh',600024,8834460049,'Vivu@gmail.com'),('Devesh','Twari','India','Indore','Madhya Pradesh',700024,8850460055,'deveshtiwari@gmail.com')";
+
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("inserted Multiple rows successfully");
+            Console.WriteLine("===============================");
+            con.Close();
+
+        }
+
     }
 }

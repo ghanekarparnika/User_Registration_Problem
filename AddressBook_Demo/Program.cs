@@ -8,4 +8,5 @@ Console.WriteLine("Welcome to Address-Book");
 //AddressBook_Operations.CreateTable();
 //AddressBook_Operations.InsertData();
 //AddressBook_Operations.Update();
-AddressBook_Operations.Delete();
+//AddressBook_Operations.Delete();
+AddressBook_Operations.InsertMutiData();
