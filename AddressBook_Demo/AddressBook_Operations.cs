@@ -39,7 +39,7 @@ namespace AddressBook_Demo
 
         public static void InsertData()
         {
-            string query = "insert into Contact values('Udit','Ghanekar','India','Pune','Maharashtra',400034,7734560049,'uditghanekar@gmail.com'),('Madhavi','Kumar','India','Panaji','Goa',400072,7734567789,'madhavikumar@gmail.com'),('Ankita','Poyarekar','India','Banglore','Karnataka',400072,8834567789,'ankitap@gmail.com')";
+            string query = "insert into Contact values('Udit','Ghanekar','India','Pune','Maharashtra',400034,7734560049,'uditghanekar@gmail.com')";
             
             SqlCommand cmd = new SqlCommand(query, con);
             con.Open();
@@ -48,6 +48,31 @@ namespace AddressBook_Demo
             Console.WriteLine("===============================");
             con.Close();
 
+        }
+
+
+        public static void Update()
+        {
+            string query = "update Contact set Last_Name='Deshmukh' where First_Name='Udit'";
+            SqlCommand cmd = new SqlCommand(query, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Updated data successfully");
+            Console.WriteLine("===============================");
+            con.Close();
+
+        }
+
+        //UC-3 Delete row using Name
+        public static void Delete()
+        {
+            string query = "Delete from Contact where First_Name='Madhavi'";
+            SqlCommand cmd= new SqlCommand(query, con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Deleted Data Successfully");
+            Console.WriteLine("===============================");
+            con.Close() ;
         }
     }
 }
