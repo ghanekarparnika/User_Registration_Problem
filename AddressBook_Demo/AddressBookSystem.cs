@@ -30,7 +30,7 @@ namespace AddressBook_Demo
             }
 
             // Create a new table for the address book in the database
-            string createTableQuery = $"CREATE TABLE {addressBookName} (FirstName VARCHAR(200), LastName VARCHAR(200), City VARCHAR(200), Phone VARCHAR(200),Email VARCHAR(200))";
+            string createTableQuery = $"CREATE TABLE {addressBookName} (FirstName VARCHAR(200), LastName VARCHAR(200), City VARCHAR(200), State varchar(200), Phone VARCHAR(200),Email VARCHAR(200))";
 
             using (con)
             {
@@ -71,6 +71,7 @@ namespace AddressBook_Demo
                 LastName = ReadValue("Enter Last Name"),
                 
                 City = ReadValue("Enter City: "),
+                State = ReadValue("Enter State: "),
                 Phone = ReadValue("Enter Phone: "),
                 Email = ReadValue("Enter Email: ")
             };
@@ -107,7 +108,7 @@ namespace AddressBook_Demo
             }
 
             // Insert the contact into the specified address book table
-            string insertQuery = $"INSERT INTO {tableName}(FirstName,LastName,City,Phone, Email)  VALUES (@FirstName,@LastName ,@City,@Phone, @Email)";
+            string insertQuery = $"INSERT INTO {tableName}(FirstName,LastName,City,,StatePhone, Email)  VALUES (@FirstName,@LastName ,@City,@State,@Phone, @Email)";
 
             using (con)
             {
@@ -118,6 +119,7 @@ namespace AddressBook_Demo
                     command.Parameters.AddWithValue("@FirstName", newPerson.FirstName);
                     command.Parameters.AddWithValue("@LastName", newPerson.LastName);
                     command.Parameters.AddWithValue("@City", newPerson.City);
+                    command.Parameters.AddWithValue("@State", newPerson.State);
                     command.Parameters.AddWithValue("@Phone", newPerson.Phone);
                     command.Parameters.AddWithValue("@Email", newPerson.Email);
 
@@ -134,6 +136,63 @@ namespace AddressBook_Demo
             Console.Write(prompt);
             return Console.ReadLine();
         }
+
+
+
+        public static void SearchPersonsByCityOrState()
+        {
+            Console.Write("Enter city or state to search: ");
+            string searchTerm = Console.ReadLine().Trim();
+
+            List<Person> matchingPersons = new List<Person>();
+
+            foreach (var tableName in addressBookDictionary.Values)
+            {
+                string searchQuery = $"SELECT * FROM {tableName} WHERE City LIKE @SearchTerm OR State LIKE @SearchTerm";
+
+                using (con)
+                {
+                    con.Open();
+
+                    using (SqlCommand command = new SqlCommand(searchQuery, con))
+                    {
+                        command.Parameters.AddWithValue("@SearchTerm", $"%{searchTerm}%");
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Person person = new Person
+                                {
+                                    FirstName = reader["FirstName"].ToString(),
+                                    LastName = reader["LastName"].ToString(),
+                                    City = reader["City"].ToString(),
+                                    State = reader["State"].ToString(),
+                                    Phone = reader["Phone"].ToString(),
+                                    Email = reader["Email"].ToString()
+                                };
+
+                                matchingPersons.Add(person);
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (matchingPersons.Count == 0)
+            {
+                Console.WriteLine("No matching persons found.");
+            }
+            else
+            {
+                Console.WriteLine("Matching persons:");
+                foreach (var person in matchingPersons)
+                {
+                    Console.WriteLine($"FirstName: {person.FirstName},LastName:{person.LastName}, City: {person.City}, State: {person.State},Phone: {person.Phone}, Email: {person.Email}");
+                }
+            }
+        }
+
 
 
     }

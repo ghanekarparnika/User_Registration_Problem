@@ -18,7 +18,8 @@ while (true)
     Console.WriteLine("Address Book System");
     Console.WriteLine("1. Create Address Book");
     Console.WriteLine("2. Add Contact to Address Book");
-    Console.WriteLine("3. Exit");
+    Console.WriteLine("3. Search Persons by City or State");
+    Console.WriteLine("4. Exit");
     Console.Write("Enter your choice: ");
 
 
@@ -36,6 +37,9 @@ while (true)
                 AddressBookSystem.AddContactToAddressBook();
                 break;
             case 3:
+                AddressBookSystem.SearchPersonsByCityOrState();
+                break;
+            case 4:
                 Environment.Exit(0);
                 break;
             default:
