@@ -25,3 +25,17 @@ select salary from Employee_Payroll where Start_Date between cast('2018-06-1' as
 alter table Employee_Payroll add Gender varchar(2);
 update Employee_Payroll set Gender='M' where Name='Raj' or Name= 'Shubham';
 update Employee_Payroll set Gender='F' where Name='Parnika' or Name= 'Arya';
+
+--UC7-Ability to find sum, average, min, max and number of male and female employees
+--sum
+select sum(salary) as Total_salary from Employee_Payroll where Gender='F' group by gender;
+--Average
+select AVG(salary) as Average from Employee_Payroll where Gender='M' group by gender;
+--min
+select MIN(salary) as Min_Salary , Name from Employee_Payroll where Gender= 'F' group by Name;
+--max
+select MAX(salary) as Max_Salary , Name from Employee_Payroll where Gender= 'M' group by Name;
+--number of male employees
+select COUNT(salary) as Count_MaleEmployees  from Employee_Payroll where Gender='M' group by gender; 
+--Number of Female Employees
+select COUNT(salary) as Count_FemaleEmployees  from Employee_Payroll where Gender='F' group by gender; 
