@@ -66,3 +66,7 @@ alter table employee_payroll add Income_Tax float;
 
 --Ability to extend employee_payroll table salary to have Net_Pay.
 alter table employee_payroll add Net_Pay float;
+
+--UC10-Ability to make Terissa as part of Sales and Marketing Department
+insert into Employee_Payroll values('Terisa',3000000.0, '2018-01-03','F',9134568977,'Karnataka','HR',50000.0, 100000.0, 50000.0,140000.0);
+
