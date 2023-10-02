@@ -20,3 +20,8 @@ select * from Employee_Payroll;
 --payroll service database
 select salary from Employee_Payroll where Name='Parnika';
 select salary from Employee_Payroll where Start_Date between cast('2018-06-1' as Date) and getdate();
+
+--UC6-Ability to add Gender to Employee Payroll Table and Update the Rows to reflect the correct Employee Gender
+alter table Employee_Payroll add Gender varchar(2);
+update Employee_Payroll set Gender='M' where Name='Raj' or Name= 'Shubham';
+update Employee_Payroll set Gender='F' where Name='Parnika' or Name= 'Arya';
