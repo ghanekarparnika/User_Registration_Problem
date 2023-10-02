@@ -48,3 +48,21 @@ alter table Employee_Payroll add Address varchar(20) not null default 'Maharasht
 select * from Employee_Payroll;
 
 alter table Employee_Payroll add Department varchar(20) not null default 'Engineering';
+
+-- UC9:- Ability to extend employee_payroll table to have Basic Pay, Deductions, Taxable Pay, Income Tax, Net Pay.
+--Ability to extend employee_payroll table salary to have Basic Pay.
+--SQL Server use sp_rename to rename the column in the Employee_payroll table from salary to Basic_Pay.
+
+EXEC sp_RENAME 'employee_payroll.salary', 'Basic_Pay', 'COLUMN';
+
+-- Ability to extend employee_payroll table salary to have Deductions.
+alter table employee_payroll add Deductions float;
+
+--Ability to extend employee_payroll table salary to have Taxable_Pay.
+alter table employee_payroll add Textable_Pay float;
+
+--Ability to extend employee_payroll table salary to have Income_Tax.
+alter table employee_payroll add Income_Tax float;
+
+--Ability to extend employee_payroll table salary to have Net_Pay.
+alter table employee_payroll add Net_Pay float;
