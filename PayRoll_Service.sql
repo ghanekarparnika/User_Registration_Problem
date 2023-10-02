@@ -15,3 +15,8 @@ insert into Employee_Payroll values('Shubham',30000.0,'2023-01-10');
 
 --UC4-Use SELECT * FROM employee_payroll to retrieve all the data from the employee_payroll table
 select * from Employee_Payroll;
+
+--UC5-Ability to retrieve salary data for a particular employee as well as all employees who have joined in a particular data range from the
+--payroll service database
+select salary from Employee_Payroll where Name='Parnika';
+select salary from Employee_Payroll where Start_Date between cast('2018-06-1' as Date) and getdate();
