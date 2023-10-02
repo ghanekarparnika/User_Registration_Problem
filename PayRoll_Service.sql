@@ -38,4 +38,13 @@ select MAX(salary) as Max_Salary , Name from Employee_Payroll where Gender= 'M' 
 --number of male employees
 select COUNT(salary) as Count_MaleEmployees  from Employee_Payroll where Gender='M' group by gender; 
 --Number of Female Employees
-select COUNT(salary) as Count_FemaleEmployees  from Employee_Payroll where Gender='F' group by gender; 
+select COUNT(salary) as Count_FemaleEmployees  from Employee_Payroll where Gender='F' group by gender;
+ 
+--UC8-Ability to extend employee_payroll data to store employee information like employee phone, address and department - Ensure employee department
+alter table Employee_Payroll add Phone bigint;
+select * from Employee_Payroll;
+
+alter table Employee_Payroll add Address varchar(20) not null default 'Maharashtra';
+select * from Employee_Payroll;
+
+alter table Employee_Payroll add Department varchar(20) not null default 'Engineering';
