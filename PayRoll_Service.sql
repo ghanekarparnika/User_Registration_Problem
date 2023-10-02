@@ -12,3 +12,6 @@ create table Employee_Payroll(Id int primary key Identity(1,1),Name varchar(20),
 insert into Employee_Payroll values('Raj',60000.0,'2018-06-1');
 insert into Employee_Payroll values('Arya',55000.0,'2020-08-03');
 insert into Employee_Payroll values('Shubham',30000.0,'2023-01-10');
+
+--UC4-Use SELECT * FROM employee_payroll to retrieve all the data from the employee_payroll table
+select * from Employee_Payroll;
