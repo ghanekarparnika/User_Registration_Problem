@@ -66,5 +66,28 @@ namespace ExceptionDemoTest
             }
 
         }
+
+
+        [TestMethod]
+        public void GivenEmptyMoodShouldThrowInvalidMood()
+        {
+            try
+            {
+                //Arrange
+                string expected = "Invalid Mood";
+                string message = " ";
+                MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+                //Act
+                string actual = moodAnalyser.analyseMood();
+
+
+            }
+            catch (MoodAnalyserException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Mood", e.Message);
+            }
+
+        }
     }
 }

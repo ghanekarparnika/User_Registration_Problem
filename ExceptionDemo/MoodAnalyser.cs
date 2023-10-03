@@ -21,6 +21,10 @@ namespace ExceptionDemo
             {
                 if (this.message.Equals(null))
                 {
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MESSAGE, message);
+                }
+                if (this.message.Equals(string.Empty))
+                {
                     throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY_MESSAGE, message);
                 }
                 if (this.message.Contains("sad"))
