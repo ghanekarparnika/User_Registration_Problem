@@ -45,5 +45,26 @@ namespace ExceptionDemoTest
             Assert.AreEqual(expected, actual);
 
         }
+
+        [TestMethod]
+        public void GivenNullMoodShouldThrowInvalidMood()
+        {
+            try
+            {
+                //Arrange
+                string expected = "Invalid Mood";
+                string message = null;
+                MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+                //Act
+                string actual = moodAnalyser.analyseMood();
+                
+               
+            }catch(MoodAnalyserException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Mood", e.Message);
+            }
+
+        }
     }
 }
