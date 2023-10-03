@@ -1,0 +1,14 @@
+C:\Users\UDIT\Downloads\ExceptionDemo\bin\Debug\net6.0\ExceptionDemo.exe
+C:\Users\UDIT\Downloads\ExceptionDemo\bin\Debug\net6.0\ExceptionDemo.deps.json
+C:\Users\UDIT\Downloads\ExceptionDemo\bin\Debug\net6.0\ExceptionDemo.runtimeconfig.json
+C:\Users\UDIT\Downloads\ExceptionDemo\bin\Debug\net6.0\ExceptionDemo.dll
+C:\Users\UDIT\Downloads\ExceptionDemo\bin\Debug\net6.0\ExceptionDemo.pdb
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.AssemblyInfoInputs.cache
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.AssemblyInfo.cs
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.csproj.CoreCompileInputs.cache
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.dll
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\refint\ExceptionDemo.dll
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.pdb
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ExceptionDemo.genruntimeconfig.cache
+C:\Users\UDIT\Downloads\ExceptionDemo\obj\Debug\net6.0\ref\ExceptionDemo.dll
