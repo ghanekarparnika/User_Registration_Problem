@@ -89,5 +89,13 @@ namespace ExceptionDemoTest
             }
 
         }
+
+        [TestMethod]
+        public void GivenClassNameShoulReturnObject()
+        {
+            object expected = new MoodAnalyser();
+            object actual = MoodAnalyserFactory.CreateMoodAnalyserObject("ExceptionDemo.MoodAnalyser", "MoodAnalyser");
+            expected.Equals(actual);
+        }
     }
 }
