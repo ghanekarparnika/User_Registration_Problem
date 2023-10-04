@@ -163,5 +163,45 @@ namespace ExceptionDemoTest
                 Assert.AreEqual("Constructor not found", ex.Message);
             }
         }
+
+        //TC6.1
+        [TestMethod]
+        public void GivenMethodNameWithMessageReturnMood()
+        {
+            string message = "I am in happy mood";
+            string expected = "HAPPY";
+            string actual = "";
+            try
+            {
+                MoodAnalyserReflector moodAnalyserReflector = new MoodAnalyserReflector();
+                actual = moodAnalyserReflector.InvokeMethod(message, "analyseMood");
+            }
+            catch (MoodAnalyserException ex)
+            {
+                Assert.AreEqual("Method not found", ex.Message);
+            }
+            Assert.AreEqual(expected, actual);
+        }
+
+      //  TC6.2
+        [TestMethod]
+        public void GivenInvalidMethodNameWithMessageThrowException()
+        {
+            string message = "I am in happy mood";
+            string expected = "HAPPY";
+            string actual = "";
+            try
+            {
+                MoodAnalyserReflector moodAnalyzerReflector = new MoodAnalyserReflector();
+                actual = moodAnalyzerReflector.InvokeMethod(message, "Mood");
+                Assert.AreEqual(expected, actual);
+            }
+            catch (MoodAnalyserException ex)
+            {
+                Assert.AreEqual("Method not found", ex.Message);
+            }
+        }
+
+
     }
 }
