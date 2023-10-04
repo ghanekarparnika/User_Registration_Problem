@@ -65,6 +65,20 @@ namespace User_Registration_Problem
                 Console.WriteLine("Invalid mobile number. Please enter in the format: CountryCode 10DigitNumber");
             }
 
+            Console.WriteLine("=====================================================");
+            Console.WriteLine("Enter your password:");
+            Console.WriteLine("1.Password should consist minimum 8 characters");
+            string password = Console.ReadLine();
+
+            if (IsValidPassword(password))
+            {
+                Console.WriteLine("Valid password!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid password. Please check: if your password consist 1.mini 8 characters");
+            }
+
         }
 
 
@@ -107,10 +121,21 @@ namespace User_Registration_Problem
         static bool IsValidMobileNumber(string mobile)
         {
             // Define a regular expression pattern for a mobile number.
-            string pattern = @"^\d{2} \d{10}$"; // Explanation below
+            string pattern = @"^\d{2} \d{10}$"; 
 
             // Use Regex.IsMatch to check if the input matches the pattern.
             return Regex.IsMatch(mobile, pattern);
+        }
+
+        //UC5-
+
+        static bool IsValidPassword(string password)
+        {
+            // Define a regular expression pattern for a mobile number.
+            string pattern = @"^.{8,}$"; 
+
+            // Use Regex.IsMatch to check if the input matches the pattern.
+            return Regex.IsMatch(password, pattern);
         }
 
 
