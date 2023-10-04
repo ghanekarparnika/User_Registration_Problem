@@ -97,5 +97,26 @@ namespace ExceptionDemoTest
             object actual = MoodAnalyserFactory.CreateMoodAnalyserObject("ExceptionDemo.MoodAnalyser", "MoodAnalyser");
             expected.Equals(actual);
         }
+
+        //passing wrong class neme
+        [TestMethod]
+        public void GivenImproperClassNameShoulReturnException()
+        {
+            object expected = new MoodAnalyser();
+            object actual = MoodAnalyserFactory.CreateMoodAnalyserObject("ExceptionDemo.MooodAnalyser", "MoodAnalyser");
+            expected.Equals(actual);
+        }
+
+
+
+
+        //passing wrong constructor neme
+        [TestMethod]
+        public void GivenImproperConstructorNameShoulReturnException()
+        {
+            object expected = new MoodAnalyser();
+            object actual = MoodAnalyserFactory.CreateMoodAnalyserObject("ExceptionDemo.MooodAnalyser", "MoodAnalyser");
+            expected.Equals(actual);
+        }
     }
 }
