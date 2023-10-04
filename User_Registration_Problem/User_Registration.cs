@@ -38,6 +38,20 @@ namespace User_Registration_Problem
                 Console.WriteLine("Invalid last name. It should start with a capital letter and have a minimum of 3 characters.");
             }
 
+            Console.WriteLine("=====================================================");
+            Console.WriteLine("Enter your email address: ");
+            Console.WriteLine("Email should be in this format: abc.xyz@bl.co.in");
+            string emailAddress = Console.ReadLine();
+
+            if (IsValidEmail(emailAddress))
+            {
+                Console.WriteLine("Valid email address!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid email address.");
+            }
+
         }
 
 
@@ -59,6 +73,19 @@ namespace User_Registration_Problem
 
             // Use Regex.IsMatch to check if the input matches the pattern.
             return Regex.IsMatch(lastName, pattern);
+        }
+
+        //UC3
+
+        static bool IsValidEmail(string email)
+        {
+
+            // abc.xyz@bl.co.in  
+            // Define the regular expression pattern for a valid email.
+            string pattern = @"^[a-zA-Z]+(\.[a-zA-Z]+)?@(bl)\.(co)(\.in)?$"; // Explanation below
+
+            // Use Regex.IsMatch to check if the input matches the pattern.
+            return Regex.IsMatch(email, pattern);
         }
 
 
