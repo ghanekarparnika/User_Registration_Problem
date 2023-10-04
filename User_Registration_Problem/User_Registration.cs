@@ -67,7 +67,7 @@ namespace User_Registration_Problem
 
             Console.WriteLine("=====================================================");
             Console.WriteLine("Enter your password:");
-            Console.WriteLine("1.Password should consist minimum 8 characters");
+            Console.WriteLine("1.Password should consist minimum 8 characters\n2. Should have at least one upper case");
             string password = Console.ReadLine();
 
             if (IsValidPassword(password))
@@ -76,7 +76,7 @@ namespace User_Registration_Problem
             }
             else
             {
-                Console.WriteLine("Invalid password. Please check: if your password consist 1.mini 8 characters");
+                Console.WriteLine("Invalid password. Please check: if your password consist 1.mini 8 characters\n2.At least one upper case");
             }
 
         }
@@ -127,12 +127,13 @@ namespace User_Registration_Problem
             return Regex.IsMatch(mobile, pattern);
         }
 
-        //UC5-
+        //UC5-^.{8,}$
+        //UC6-^(?=.*[A-Z]).{8,}$
 
         static bool IsValidPassword(string password)
         {
             // Define a regular expression pattern for a mobile number.
-            string pattern = @"^.{8,}$"; 
+            string pattern = @"^(?=.*[A-Z]).{8,}$"; 
 
             // Use Regex.IsMatch to check if the input matches the pattern.
             return Regex.IsMatch(password, pattern);
