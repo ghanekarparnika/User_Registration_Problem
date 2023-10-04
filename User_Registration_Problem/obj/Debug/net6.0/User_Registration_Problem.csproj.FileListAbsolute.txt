@@ -1,0 +1,14 @@
+C:\Users\UDIT\Downloads\User_Registration_Problem\bin\Debug\net6.0\User_Registration_Problem.exe
+C:\Users\UDIT\Downloads\User_Registration_Problem\bin\Debug\net6.0\User_Registration_Problem.deps.json
+C:\Users\UDIT\Downloads\User_Registration_Problem\bin\Debug\net6.0\User_Registration_Problem.runtimeconfig.json
+C:\Users\UDIT\Downloads\User_Registration_Problem\bin\Debug\net6.0\User_Registration_Problem.dll
+C:\Users\UDIT\Downloads\User_Registration_Problem\bin\Debug\net6.0\User_Registration_Problem.pdb
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.AssemblyInfoInputs.cache
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.AssemblyInfo.cs
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.csproj.CoreCompileInputs.cache
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.dll
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\refint\User_Registration_Problem.dll
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.pdb
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\User_Registration_Problem.genruntimeconfig.cache
+C:\Users\UDIT\Downloads\User_Registration_Problem\obj\Debug\net6.0\ref\User_Registration_Problem.dll
