@@ -52,11 +52,31 @@ namespace ExceptionDemo
         {
             try
             {
-                Type type = typeof(MoodAnalyser); // Getting a type of MoodAnalyzer class
-                ConstructorInfo constructorInfo = type.GetConstructor(new[] { typeof(string) }); //Getting constructor which hase one parameter of type string
-                        return constructorInfo.Invoke(new object[] { message }); //Invoking a object
-                       
+                if (className == null || constructor == null || message == null) // If any field is null then throw exception
+                {
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL_MESSAGE, "Class name,constructor name or message should not be null");
+                }
+                        Type type = typeof(MoodAnalyser); // Getting a type of MoodAnalyzer class
+                if (type.Name.Equals(className) || type.FullName.Equals(className)) // If actual type name of Mood Analyser class is matching with given class name throw create object
+                {
+                    if (type.Name.Equals(constructor)) // If class name is match with constructor then create parameterized object of class
+                    {
+                        ConstructorInfo constructorInfo = type.GetConstructor(new[] { typeof(string) }); //Getting constructor which hase one parameter of type string
+                                return constructorInfo.Invoke(new object[] { message }); //Invoking a object
+                    }
+                    else // else throw exception constructor not found
+                    {
+                        throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.CONSTRUCTOR_NOT_FOUND, "Constructor not found");
+                    }
+                }
+                else  //else throw exception class not found
+                {
+                    throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.CLASS_NOT_FOUND, "Class not found");
+                }
             }
+
+
+            
             catch (MoodAnalyserException e)
             {
                 return e.Message;

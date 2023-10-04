@@ -1,4 +1,5 @@
 using ExceptionDemo;
+using Newtonsoft.Json.Linq;
 
 namespace ExceptionDemoTest
 {
@@ -119,7 +120,7 @@ namespace ExceptionDemoTest
             expected.Equals(actual);
         }
 
-        //UC5-Given MoodAnalyser Class Name Should Return MoodAnalyser object with parameter
+        //UC5.1-Given MoodAnalyser Class Name Should Return MoodAnalyser object with parameter
         [TestMethod]
         public void GivenClassNameShouldReturnParameterizedObject()
         {
@@ -127,6 +128,40 @@ namespace ExceptionDemoTest
             object expected = new MoodAnalyser(message);
             object actual = MoodAnalyserFactory.CreateMoodAnalyserParameterizedObject("ExceptionDemo.MoodAnalyser", "MoodAnalyser", message);
             expected.Equals(actual);
+        }
+
+        //TC5.2-Given Class Name When  Improper Should Throw MoodAnalysisException
+
+                [TestMethod]
+        public void GivenInvalidClassNameWithMessageThrowException()
+        {
+            try
+            {
+                string message = "I am in happy mood";
+                object expected = new MoodAnalyser(message);
+                object actual = MoodAnalyserFactory.CreateMoodAnalyserParameterizedObject("ExceptionDemo.Mood", "Mood", message);
+            }
+            catch (MoodAnalyserException ex)
+            {
+                Assert.AreEqual("Class not found", ex.Message);
+            }
+        }
+
+        //TC5.3-Given Class When Constructor Not Proper Should Throw MoodAnalysisException
+
+        [TestMethod]
+        public void GivenInvalidConstructorWithMessageThrowException()
+        {
+            try
+            {
+                string message = "I am in happy mood";
+                object expected = new MoodAnalyser(message);
+                object actual = MoodAnalyserFactory.CreateMoodAnalyserParameterizedObject("ExceptionDemo.MoodAnalyser", "Mood", message);
+            }
+            catch (MoodAnalyserException ex)
+            {
+                Assert.AreEqual("Constructor not found", ex.Message);
+            }
         }
     }
 }
