@@ -110,12 +110,22 @@ namespace ExceptionDemoTest
 
 
 
-        //passing wrong constructor neme
+        //TC4.3-passing wrong constructor name
         [TestMethod]
         public void GivenImproperConstructorNameShoulReturnException()
         {
             object expected = new MoodAnalyser();
             object actual = MoodAnalyserFactory.CreateMoodAnalyserObject("ExceptionDemo.MooodAnalyser", "MoodAnalyser");
+            expected.Equals(actual);
+        }
+
+        //UC5-Given MoodAnalyser Class Name Should Return MoodAnalyser object with parameter
+        [TestMethod]
+        public void GivenClassNameShouldReturnParameterizedObject()
+        {
+            string message = "I am in happy mood";
+            object expected = new MoodAnalyser(message);
+            object actual = MoodAnalyserFactory.CreateMoodAnalyserParameterizedObject("ExceptionDemo.MoodAnalyser", "MoodAnalyser", message);
             expected.Equals(actual);
         }
     }

@@ -46,5 +46,21 @@ namespace ExceptionDemo
             }
         
         }
+
+
+        public static object CreateMoodAnalyserParameterizedObject(string className, string constructor, string message)
+        {
+            try
+            {
+                Type type = typeof(MoodAnalyser); // Getting a type of MoodAnalyzer class
+                ConstructorInfo constructorInfo = type.GetConstructor(new[] { typeof(string) }); //Getting constructor which hase one parameter of type string
+                        return constructorInfo.Invoke(new object[] { message }); //Invoking a object
+                       
+            }
+            catch (MoodAnalyserException e)
+            {
+                return e.Message;
+            }
+        }
     }
 }
