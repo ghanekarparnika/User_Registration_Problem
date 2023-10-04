@@ -52,6 +52,19 @@ namespace User_Registration_Problem
                 Console.WriteLine("Invalid email address.");
             }
 
+            Console.WriteLine("=====================================================");
+            Console.WriteLine("Enter your mobile number:");
+            string mobileNumber = Console.ReadLine();
+
+            if (IsValidMobileNumber(mobileNumber))
+            {
+                Console.WriteLine("Valid mobile number!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid mobile number. Please enter in the format: CountryCode 10DigitNumber");
+            }
+
         }
 
 
@@ -86,6 +99,18 @@ namespace User_Registration_Problem
 
             // Use Regex.IsMatch to check if the input matches the pattern.
             return Regex.IsMatch(email, pattern);
+        }
+
+
+        //UC4-
+
+        static bool IsValidMobileNumber(string mobile)
+        {
+            // Define a regular expression pattern for a mobile number.
+            string pattern = @"^\d{2} \d{10}$"; // Explanation below
+
+            // Use Regex.IsMatch to check if the input matches the pattern.
+            return Regex.IsMatch(mobile, pattern);
         }
 
 
