@@ -82,8 +82,7 @@ namespace User_Registration_Problem
 
             // abc.xyz@bl.co.in  
             // Define the regular expression pattern for a valid email.
-            string pattern = @"^[a-zA-Z]+(\.[a-zA-Z]+)?@(bl)\.(co)(\.in)?$"; // Explanation below
-
+            string pattern = @"^[a-zA-Z]+(\.[a-zA-Z]+)?@(bl)\.(co)(\.in)?$"; 
             // Use Regex.IsMatch to check if the input matches the pattern.
             return Regex.IsMatch(email, pattern);
         }
